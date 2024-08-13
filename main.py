@@ -14,9 +14,9 @@ SLEEP = 60
 qb = Client(QB_URL, verify=QB_VERIFY)
 qb.login(QB_USER, QB_PASS)
 
-torrents = qb.torrents()
-
 while True:
+    torrents = qb.torrents()
+    
     for torrent in torrents:
         # if '727' in torrent['name']:
         #     pass
